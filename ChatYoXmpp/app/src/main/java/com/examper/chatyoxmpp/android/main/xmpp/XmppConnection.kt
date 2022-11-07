@@ -83,7 +83,10 @@ class XmppConnection(
                 Log.e(TAG, "INIT IO EXCEPTION:" + e.message)
             } catch (e: SmackException) {
                 Log.e(TAG, "INIT SMACK EXCEPTION:" + e.message)
+            }catch (e: Exception) {
+                Log.e(TAG, "--Connect Exception:" + e.message)
             }
+
             /**To return on main thread
              *  uiThread {
             toast(result)
